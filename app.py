@@ -6,7 +6,7 @@ from flask_cors import CORS,cross_origin
 import warnings
 warnings.filterwarnings("ignore")
 
-db = connection.connect(host="localhost",user="root",passwd="mysql",database="adityaraj",use_pure=True)
+db = connection.connect(host="127.0.0.1",user="root",passwd="mysql",database="adityaraj",use_pure=True,port="3306")
 cur = db.cursor()
 cur.execute("CREATE TABLE if not exists salary3 ( Experience int NOT NULL,  TestScore int NOT NULL , InterviewScore int)")
 db.commit()
